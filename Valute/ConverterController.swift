@@ -11,9 +11,23 @@ final class ConverterController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.isNavigationBarHidden = false
         // Do any additional setup after loading the view.
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        self.navigationController?.isNavigationBarHidden = false
+//    }
+}
+    
+private extension ConverterController{
+    @IBAction func pickCurrency() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PickerController")
+        
+        show(vc, sender: self)
+    }
+}
 
 
     /*
@@ -26,4 +40,4 @@ final class ConverterController: UIViewController {
     }
     */
 
-}
+
