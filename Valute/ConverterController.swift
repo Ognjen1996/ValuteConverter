@@ -8,6 +8,10 @@
 import UIKit
 
 final class ConverterController: UIViewController {
+    
+    @IBOutlet weak var leftCurrencyBox: CurrencyBox!
+    @IBOutlet weak var rightCurrencyBox: CurrencyBox!
+    @IBOutlet weak var keypadView: KeypadView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

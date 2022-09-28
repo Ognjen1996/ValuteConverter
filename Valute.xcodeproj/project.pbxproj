@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		355511B628E2D3D8007ECFB2 /* CurrencyBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355511B528E2D3D8007ECFB2 /* CurrencyBox.swift */; };
+		355511B828E2D3F3007ECFB2 /* KeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355511B728E2D3F3007ECFB2 /* KeypadView.swift */; };
 		355956BA28DD918900D7E626 /* ConverterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355956B828DD918900D7E626 /* ConverterController.swift */; };
 		3566693F28DC97A7009074BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566693E28DC97A7009074BA /* AppDelegate.swift */; };
 		3566694128DC97A7009074BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566694028DC97A7009074BA /* SceneDelegate.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		355511B528E2D3D8007ECFB2 /* CurrencyBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyBox.swift; sourceTree = "<group>"; };
+		355511B728E2D3F3007ECFB2 /* KeypadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadView.swift; sourceTree = "<group>"; };
 		355956B828DD918900D7E626 /* ConverterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterController.swift; sourceTree = "<group>"; };
 		3566693B28DC97A7009074BA /* Valute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Valute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3566693E28DC97A7009074BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				355956B828DD918900D7E626 /* ConverterController.swift */,
 				35A8747428E19E750053E6CE /* PickerController.swift */,
 				3566694028DC97A7009074BA /* SceneDelegate.swift */,
+				355511B528E2D3D8007ECFB2 /* CurrencyBox.swift */,
+				355511B728E2D3F3007ECFB2 /* KeypadView.swift */,
 				3566694428DC97A7009074BA /* Main.storyboard */,
 				3566694728DC97AE009074BA /* Assets.xcassets */,
 				3566694928DC97AE009074BA /* LaunchScreen.storyboard */,
@@ -145,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355511B628E2D3D8007ECFB2 /* CurrencyBox.swift in Sources */,
 				3566693F28DC97A7009074BA /* AppDelegate.swift in Sources */,
+				355511B828E2D3F3007ECFB2 /* KeypadView.swift in Sources */,
 				355956BA28DD918900D7E626 /* ConverterController.swift in Sources */,
 				3566694128DC97A7009074BA /* SceneDelegate.swift in Sources */,
 				35A8747528E19E750053E6CE /* PickerController.swift in Sources */,
