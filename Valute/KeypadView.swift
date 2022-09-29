@@ -13,6 +13,7 @@ final class KeypadView: UIView {
     var ammonut: Double?
     @IBOutlet var digitButtons: [UIButton]!
     @IBOutlet var operatorButtons: [UIButton]!
+    @IBOutlet var equalsButton: UIButton!
     @IBOutlet var leftTextField: UITextField!
     @IBOutlet var rightTextField: UITextField!
     
@@ -28,15 +29,13 @@ final class KeypadView: UIView {
     var number2: Double?
     var sign: String?
     
-
-    
-    @IBAction func didTapButton(_ sender: UIButton) {
-        if let caption = sender.titleLabel!.text {
-//            var s = resultLabel.text ?? ""
-//            s += caption
-//            resultLabel.text = s
-        }
+    @IBAction func hideButton(_ sender: UIButton) {
+        equalsButton.isHidden = true
     }
+    @IBAction func showButton(_ sender: UIButton) {
+        equalsButton.isHidden = false
+    }
+
     
     @IBAction func didTouchButton(_ sender: UIButton){
         originalBackgroundColor = sender.backgroundColor
@@ -65,9 +64,10 @@ final class KeypadView: UIView {
     @IBAction func addDigit(_ sender: UIButton) {
         guard let numString = sender.titleLabel?.text else {
             buttonsUntouch(sender)
+            
             return
         }
-        
+        stringAmount = ""
         var value = stringAmount ?? ""
         value += numString
         stringAmount = value
@@ -76,50 +76,76 @@ final class KeypadView: UIView {
     @IBAction func didTapOperator(_ sender: UIButton){
         if let caption = sender.titleLabel!.text {
             sign = caption
-            number1 = Double(leftTextField.text!)
+            number1 = Double(stringAmount!)
 //            clearAll()
+            showButton(sender)
     }
-//        disableButtons()
+        disableButtons()
 }
     
     @IBAction func didTapEquals(_ sender: UIButton){
         switch sign{
         case "+":
-            number2 = Double(leftTextField.text!)
+            
+            number2 = Double(stringAmount!)
             let result = number1! + number2!
             let a = String(result)
             stringAmount = a
-//            applyTheme()
+            hideButton(sender)
             break
         case "-":
-            number2 = Double(leftTextField.text!)
+            
+            number2 = Double(stringAmount!)
             let result = number1! - number2!
             let a = String(result)
             stringAmount = a
-//            applyTheme()
+            hideButton(sender)
             break
         case "X":
-            number2 = Double(leftTextField.text!)
+            
+            number2 = Double(stringAmount!)
             let result = number1! * number2!
             let a = String(result)
             stringAmount = a
-//            applyTheme()
+            hideButton(sender)
             break
         case "/":
-            number2 = Double(leftTextField.text!)
+            
+            number2 = Double(stringAmount!)
             let result = number1! / number2!
             let a = String(result)
             stringAmount = a
-//            applyTheme()
+            hideButton(sender)
             break
         default:
             buttonsUntouch(sender)
-//            applyTheme()
+            hideButton(sender)
             break
             
         }
-//        enableButtons()
+        enableButtons()
+        
     }
-}
     
+    
+    func disableButtons(){
+        for btn in operatorButtons{
+            let caption = btn.titleLabel!.text
+            if caption == "=" { continue }
+            btn.alpha = 0.5
+            btn.isUserInteractionEnabled = false
+            
+        }
+    }
+
+    func enableButtons(){
+        for btn in operatorButtons{
+            btn.alpha = 1.0
+            btn.isUserInteractionEnabled = true
+            
+        }
+    }
+       
+}
+ 
 

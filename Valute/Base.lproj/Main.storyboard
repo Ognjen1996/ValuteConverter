@@ -188,7 +188,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2M-bW-h5w">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
-                                                <color key="backgroundColor" white="1" alpha="0.60304966102652002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="1" alpha="0.60304966100000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="J2M-bW-h5w" secondAttribute="height" multiplier="1:1" id="ThV-2s-WNF"/>
                                                 </constraints>
@@ -238,7 +238,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.073534958060000002" green="0.3846774697" blue="0.43471908570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="vVx-86-fJY" secondAttribute="trailing" id="0lk-gb-UV9"/>
                                             <constraint firstItem="qja-sm-zgB" firstAttribute="top" secondItem="vVx-86-fJY" secondAttribute="top" id="2pa-DJ-pSd"/>
@@ -267,7 +267,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-ex-ToY">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="94.5"/>
-                                                <color key="backgroundColor" white="1" alpha="0.60023301314164534" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="1" alpha="0.60304966100000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="X"/>
                                                 <connections>
@@ -314,7 +314,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.073534958060000002" green="0.3846774697" blue="0.43471908570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="F8e-BS-wZl" firstAttribute="bottom" secondItem="fSE-Pm-1yo" secondAttribute="bottom" id="4Et-a1-TNb"/>
                                             <constraint firstItem="OjD-ZZ-aHx" firstAttribute="bottom" secondItem="F8e-BS-wZl" secondAttribute="bottom" id="8Hu-ZP-EVF"/>
@@ -343,7 +343,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHi-g6-pkh">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
-                                                <color key="backgroundColor" white="1" alpha="0.60023301314164534" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="1" alpha="0.60304966100000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="-"/>
                                                 <connections>
@@ -391,7 +391,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.073534958060000002" green="0.3846774697" blue="0.43471908570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Egf-Bt-onn" secondAttribute="trailing" id="8gb-SO-xxj"/>
                                             <constraint firstAttribute="bottom" secondItem="ZHi-g6-pkh" secondAttribute="bottom" id="C1Z-2L-1DN"/>
@@ -420,7 +420,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kve-1X-WBd">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="94.5"/>
-                                                <color key="backgroundColor" white="1" alpha="0.60023301314164534" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="1" alpha="0.60304966100000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="+"/>
                                                 <connections>
@@ -430,16 +430,17 @@
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="4rP-U1-Hyp"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMT-V6-JOZ">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMT-V6-JOZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="94.5"/>
-                                                <color key="backgroundColor" white="1" alpha="0.60023301309999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.16626435519999999" green="0.48668432239999998" blue="0.54917997119999995" alpha="0.74682305783641578" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="="/>
                                                 <connections>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="PpV-ap-IvR"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="d3J-pO-Fdu"/>
-                                                    <action selector="didTapOperator:" destination="qZR-O8-0x6" eventType="touchUpInside" id="Kca-kj-uMU"/>
+                                                    <action selector="didTapEquals:" destination="qZR-O8-0x6" eventType="touchUpInside" id="Jn3-vn-v7B"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="MEg-Ws-YJj"/>
+                                                    <action selector="hideButton:" destination="qZR-O8-0x6" eventType="touchUpInside" id="SFD-np-k9Q"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oq6-mv-XEd">
@@ -477,7 +478,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.073534958060000002" green="0.3846774697" blue="0.43471908570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="kve-1X-WBd" firstAttribute="leading" secondItem="O6n-nb-fRh" secondAttribute="leading" id="2qd-gY-Hin"/>
                                             <constraint firstItem="8ve-uH-TS8" firstAttribute="width" secondItem="clH-gk-GIU" secondAttribute="width" id="4fo-vV-eei"/>
@@ -510,7 +511,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.081077471012947377" green="0.4268776633763417" blue="0.48734830090115189" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="L17-Pn-qo2" firstAttribute="trailing" secondItem="S8X-72-oI7" secondAttribute="trailing" id="1lR-PT-YUR"/>
                                     <constraint firstItem="O6n-nb-fRh" firstAttribute="top" secondItem="L17-Pn-qo2" secondAttribute="bottom" constant="1" id="5yf-G1-8LO"/>
@@ -530,6 +531,7 @@
                                     <constraint firstItem="O6n-nb-fRh" firstAttribute="height" secondItem="L17-Pn-qo2" secondAttribute="height" id="uZa-IM-hsW"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="equalsButton" destination="KMT-V6-JOZ" id="k5C-2M-O7t"/>
                                     <outletCollection property="digitButtons" destination="U1m-N6-SxU" collectionClass="NSMutableArray" id="CiY-lW-Ohi"/>
                                     <outletCollection property="digitButtons" destination="qja-sm-zgB" collectionClass="NSMutableArray" id="dac-bg-Bnm"/>
                                     <outletCollection property="digitButtons" destination="vVx-86-fJY" collectionClass="NSMutableArray" id="dLL-c0-1WF"/>
