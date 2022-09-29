@@ -206,6 +206,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="1"/>
                                                 <connections>
+                                                    <action selector="addDigit:" destination="qZR-O8-0x6" eventType="touchUpInside" id="fjn-br-8t2"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="Bxa-vU-aUT"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="mMe-m3-HcG"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="UW7-fC-2Um"/>
@@ -217,6 +218,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="2"/>
                                                 <connections>
+                                                    <action selector="addDigit:" destination="qZR-O8-0x6" eventType="touchUpInside" id="6mh-UT-rr2"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="iCD-9G-tYY"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="tFL-Pd-Asa"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="fbb-Fs-uKT"/>
@@ -228,6 +230,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="3"/>
                                                 <connections>
+                                                    <action selector="addDigit:" destination="qZR-O8-0x6" eventType="touchUpInside" id="nTF-4j-FaL"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="B6m-Ww-86O"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="g3b-q7-AKq"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="j6W-1Q-1zP"/>
@@ -278,6 +281,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="4"/>
                                                 <connections>
+                                                    <action selector="addDigit:" destination="qZR-O8-0x6" eventType="touchUpInside" id="BPZ-s8-1vD"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="5zT-B0-JhH"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="RWF-zO-1ym"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="RIm-Qt-Rri"/>
@@ -289,6 +293,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="5"/>
                                                 <connections>
+                                                    <action selector="addDigit:" destination="qZR-O8-0x6" eventType="touchUpInside" id="xnA-u9-kVs"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="Rcj-Kc-VWz"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="j4a-IH-z9L"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="w63-X3-2o9"/>
@@ -300,6 +305,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="6"/>
                                                 <connections>
+                                                    <action selector="addDigit:" destination="qZR-O8-0x6" eventType="touchUpInside" id="ZR5-xR-9yD"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="arn-26-nae"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="s1O-DY-xrj"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="yfR-vc-Xmr"/>
@@ -351,6 +357,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="7"/>
                                                 <connections>
+                                                    <action selector="addDigit:" destination="qZR-O8-0x6" eventType="touchUpInside" id="Sen-YJ-4Pw"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="cWc-dB-EHl"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="mpb-YO-FG0"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="ra8-Py-tiO"/>
@@ -362,6 +369,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="8"/>
                                                 <connections>
+                                                    <action selector="addDigit:" destination="qZR-O8-0x6" eventType="touchUpInside" id="d05-xz-Exh"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="I9N-0a-Vug"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="ih7-EI-WTr"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="FBB-fS-R77"/>
@@ -373,6 +381,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="9"/>
                                                 <connections>
+                                                    <action selector="addDigit:" destination="qZR-O8-0x6" eventType="touchUpInside" id="OAp-Vs-hd8"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="wT0-IB-k3w"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="xgg-sd-548"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="eBm-3N-KWI"/>
@@ -434,6 +443,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="0"/>
                                                 <connections>
+                                                    <action selector="addDigit:" destination="qZR-O8-0x6" eventType="touchUpInside" id="tbn-Af-owG"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="Hih-nP-fx7"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="eW2-89-sUq"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="fUT-Hm-xfO"/>

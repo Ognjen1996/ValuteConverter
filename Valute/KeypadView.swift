@@ -18,6 +18,12 @@ final class KeypadView: UIView {
     
     private var originalBackgroundColor: UIColor?
     
+    private(set) var stringAmount: String?
+    
+    var number1: Double?
+    var number2: Double?
+    var sign: String?
+    
 
     
     @IBAction func didTapButton(_ sender: UIButton) {
@@ -52,4 +58,64 @@ final class KeypadView: UIView {
         originalBackgroundColor = nil
     }
     
+    @IBAction func addDigit(_ sender: UIButton) {
+        guard let numString = sender.titleLabel?.text else {
+            buttonsUntouch(sender)
+            return
+        }
+        
+        var value = stringAmount ?? ""
+        value += numString
+        stringAmount = value
+    }
+    
+    @IBAction func didTapOperator(_ sender: UIButton){
+        if let caption = sender.titleLabel!.text {
+            sign = caption
+            number1 = Double(leftTextField.text!)
+//            clearAll()
+    }
+//        disableButtons()
 }
+    
+    @IBAction func didTapEquals(_ sender: UIButton){
+        switch sign{
+        case "+":
+            number2 = Double(leftTextField.text!)
+            let result = number1! + number2!
+            let a = String(result)
+            stringAmount = a
+//            applyTheme()
+            break
+        case "-":
+            number2 = Double(leftTextField.text!)
+            let result = number1! - number2!
+            let a = String(result)
+            stringAmount = a
+//            applyTheme()
+            break
+        case "X":
+            number2 = Double(leftTextField.text!)
+            let result = number1! * number2!
+            let a = String(result)
+            stringAmount = a
+//            applyTheme()
+            break
+        case "/":
+            number2 = Double(leftTextField.text!)
+            let result = number1! / number2!
+            let a = String(result)
+            stringAmount = a
+//            applyTheme()
+            break
+        default:
+            buttonsUntouch(sender)
+//            applyTheme()
+            break
+            
+        }
+//        enableButtons()
+    }
+}
+    
+
