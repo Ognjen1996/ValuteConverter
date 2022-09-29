@@ -44,7 +44,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCQ-hc-BFo" userLabel="left" customClass="CurrencyBox" customModule="Valute" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="190.5" height="89"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="23.54" placeholder="100.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4A-yr-e3x">
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S4A-yr-e3x">
                                                         <rect key="frame" x="8" y="36.5" width="174.5" height="44.5"/>
                                                         <color key="textColor" red="0.9902165477" green="0.98257188569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
@@ -102,7 +102,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Yc-AO-Rqa" userLabel="right" customClass="CurrencyBox" customModule="Valute" customModuleProvider="target">
                                                 <rect key="frame" x="191.5" y="0.0" width="190.5" height="89"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="23.54" placeholder="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JjF-hI-gJh">
+                                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JjF-hI-gJh">
                                                         <rect key="frame" x="8" y="36.5" width="174.5" height="44.5"/>
                                                         <color key="textColor" red="0.9902165477" green="0.98257188569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>

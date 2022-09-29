@@ -9,6 +9,8 @@ import UIKit
 
 final class ConverterController: UIViewController {
     
+//    @IBOutlet weak private var keypadView: KeypadView!
+    
     @IBOutlet weak var leftCurrencyBox: CurrencyBox!
     @IBOutlet weak var rightCurrencyBox: CurrencyBox!
     @IBOutlet weak var keypadView: KeypadView!
@@ -17,11 +19,18 @@ final class ConverterController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
         // Do any additional setup after loading the view.
+        keypadView.delegate = self
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
 //        self.navigationController?.isNavigationBarHidden = false
 //    }
+}
+
+extension ConverterController: KeypadViewDelegate {
+    func keypadView(_ keypad: KeypadView, didChangeValue value: String?) {
+        leftCurrencyBox.textField.text = value
+    }
 }
     
 private extension ConverterController{

@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol KeypadViewDelegate: class {
+    func keypadView(_ keypad: KeypadView, didChangeValue value: String?)
+}
+
 final class KeypadView: UIView {
+    
+    weak var delegate: KeypadViewDelegate?
 
     var text: String?
     var ammonut: Double?
@@ -23,7 +29,12 @@ final class KeypadView: UIView {
     
     private var originalBackgroundColor: UIColor?
     
-    private(set) var stringAmount: String?
+    private(set) var stringAmount: String? {
+        
+        didSet {
+            delegate?.keypadView(self, didChangeValue: stringAmount)
+        }
+    }
     
     var number1: Double?
     var number2: Double?
