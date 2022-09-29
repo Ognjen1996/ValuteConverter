@@ -197,6 +197,7 @@
                                                 <connections>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="t1a-BG-pIo"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="wNM-LD-paw"/>
+                                                    <action selector="didTapOperator:" destination="qZR-O8-0x6" eventType="touchUpInside" id="dUv-vD-qb0"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="YNy-Y8-XL7"/>
                                                 </connections>
                                             </button>
@@ -272,6 +273,7 @@
                                                 <connections>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="L1G-7q-EXR"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="sWJ-YB-fGK"/>
+                                                    <action selector="didTapOperator:" destination="qZR-O8-0x6" eventType="touchUpInside" id="tlL-PH-MBU"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="Afk-US-unt"/>
                                                 </connections>
                                             </button>
@@ -348,6 +350,7 @@
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchDragInside" id="Bwg-kp-4S5"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="Xg5-c9-MZC"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="iCL-a6-vIi"/>
+                                                    <action selector="didTapOperator:" destination="qZR-O8-0x6" eventType="touchUpInside" id="ruE-SE-coY"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="SSm-HV-9Mq"/>
                                                 </connections>
                                             </button>
@@ -423,7 +426,20 @@
                                                 <connections>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="Bp6-wG-yTk"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="pBf-Lc-BJ3"/>
+                                                    <action selector="didTapOperator:" destination="qZR-O8-0x6" eventType="touchUpInside" id="gyx-DQ-sWz"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="4rP-U1-Hyp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMT-V6-JOZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="94.5"/>
+                                                <color key="backgroundColor" white="1" alpha="0.60023301309999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="="/>
+                                                <connections>
+                                                    <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="PpV-ap-IvR"/>
+                                                    <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="d3J-pO-Fdu"/>
+                                                    <action selector="didTapOperator:" destination="qZR-O8-0x6" eventType="touchUpInside" id="Kca-kj-uMU"/>
+                                                    <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="MEg-Ws-YJj"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oq6-mv-XEd">
@@ -473,16 +489,24 @@
                                             <constraint firstItem="oq6-mv-XEd" firstAttribute="bottom" secondItem="8ve-uH-TS8" secondAttribute="bottom" id="JmN-GG-VkZ"/>
                                             <constraint firstItem="8ve-uH-TS8" firstAttribute="bottom" secondItem="clH-gk-GIU" secondAttribute="bottom" id="Juu-0w-Qtf"/>
                                             <constraint firstItem="8ve-uH-TS8" firstAttribute="leading" secondItem="oq6-mv-XEd" secondAttribute="trailing" constant="1" id="LHb-JR-Qvb"/>
+                                            <constraint firstItem="KMT-V6-JOZ" firstAttribute="top" secondItem="oq6-mv-XEd" secondAttribute="top" id="PFX-H8-x2N"/>
+                                            <constraint firstItem="KMT-V6-JOZ" firstAttribute="bottom" secondItem="oq6-mv-XEd" secondAttribute="bottom" id="QSi-Yu-pua"/>
                                             <constraint firstItem="oq6-mv-XEd" firstAttribute="top" secondItem="8ve-uH-TS8" secondAttribute="top" id="TW1-EI-LkW"/>
+                                            <constraint firstAttribute="bottom" secondItem="KMT-V6-JOZ" secondAttribute="bottom" id="UNF-R3-Xjd"/>
+                                            <constraint firstItem="oq6-mv-XEd" firstAttribute="leading" secondItem="KMT-V6-JOZ" secondAttribute="trailing" constant="1" id="V1H-kQ-Li6"/>
                                             <constraint firstItem="clH-gk-GIU" firstAttribute="top" secondItem="O6n-nb-fRh" secondAttribute="top" id="W6r-bS-CMo"/>
                                             <constraint firstItem="kve-1X-WBd" firstAttribute="top" secondItem="oq6-mv-XEd" secondAttribute="top" id="Wcz-0r-pvS"/>
                                             <constraint firstItem="oq6-mv-XEd" firstAttribute="height" secondItem="8ve-uH-TS8" secondAttribute="height" id="gjE-ls-F9J"/>
                                             <constraint firstAttribute="bottom" secondItem="kve-1X-WBd" secondAttribute="bottom" id="isL-JE-6NI"/>
+                                            <constraint firstItem="KMT-V6-JOZ" firstAttribute="height" secondItem="oq6-mv-XEd" secondAttribute="height" id="jcB-yV-lNB"/>
+                                            <constraint firstItem="KMT-V6-JOZ" firstAttribute="leading" secondItem="O6n-nb-fRh" secondAttribute="leading" priority="800" id="lBR-rd-7yP"/>
                                             <constraint firstItem="kve-1X-WBd" firstAttribute="height" secondItem="oq6-mv-XEd" secondAttribute="height" id="m3o-U5-QBL"/>
+                                            <constraint firstItem="KMT-V6-JOZ" firstAttribute="width" secondItem="oq6-mv-XEd" secondAttribute="width" id="mU6-mE-9Ey"/>
                                             <constraint firstItem="8ve-uH-TS8" firstAttribute="height" secondItem="clH-gk-GIU" secondAttribute="height" id="nHp-ps-cge"/>
                                             <constraint firstItem="clH-gk-GIU" firstAttribute="leading" secondItem="8ve-uH-TS8" secondAttribute="trailing" constant="1" id="qrC-U3-t4B"/>
                                             <constraint firstItem="kve-1X-WBd" firstAttribute="width" secondItem="oq6-mv-XEd" secondAttribute="width" id="uj5-Ym-YyN"/>
                                             <constraint firstItem="oq6-mv-XEd" firstAttribute="leading" secondItem="kve-1X-WBd" secondAttribute="trailing" constant="1" id="x9L-PK-Ok5"/>
+                                            <constraint firstItem="KMT-V6-JOZ" firstAttribute="top" secondItem="O6n-nb-fRh" secondAttribute="top" id="ybP-WS-6yb"/>
                                         </constraints>
                                     </view>
                                 </subviews>

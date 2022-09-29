@@ -16,6 +16,10 @@ final class KeypadView: UIView {
     @IBOutlet var leftTextField: UITextField!
     @IBOutlet var rightTextField: UITextField!
     
+    @IBOutlet private var plusHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private var equalsHeightConstraint: NSLayoutConstraint!
+
+    
     private var originalBackgroundColor: UIColor?
     
     private(set) var stringAmount: String?
