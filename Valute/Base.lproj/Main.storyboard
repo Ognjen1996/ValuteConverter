@@ -578,8 +578,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="keypadView" destination="qZR-O8-0x6" id="Qhf-tf-fSt"/>
-                        <outlet property="leftCurrencyBox" destination="jCQ-hc-BFo" id="dh6-OZ-PY2"/>
-                        <outlet property="rightCurrencyBox" destination="2Yc-AO-Rqa" id="iac-Hi-sho"/>
+                        <outlet property="sourceCurrencyBox" destination="jCQ-hc-BFo" id="S6d-6d-GSz"/>
+                        <outlet property="targetCurrencyBox" destination="2Yc-AO-Rqa" id="G82-9I-2yZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8pz-uh-aNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

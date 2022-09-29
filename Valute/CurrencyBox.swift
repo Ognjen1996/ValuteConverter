@@ -21,5 +21,12 @@ final class CurrencyBox: UIView {
             label.text = newValue
         }
     }
-    var ammount: Double?
+    var ammount: String?{
+        get {
+            return textField.text
+        }
+        set {
+            textField.text = newValue
+        }
+    }
 }

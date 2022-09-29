@@ -14,6 +14,9 @@ final class ConverterController: UIViewController {
     @IBOutlet weak var leftCurrencyBox: CurrencyBox!
     @IBOutlet weak var rightCurrencyBox: CurrencyBox!
     @IBOutlet weak var keypadView: KeypadView!
+    @IBOutlet weak var sourceCurrencyBox: CurrencyBox!
+    @IBOutlet weak var targetCurrencyBox: CurrencyBox!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,18 @@ final class ConverterController: UIViewController {
 
 extension ConverterController: KeypadViewDelegate {
     func keypadView(_ keypad: KeypadView, didChangeValue value: String?) {
-        leftCurrencyBox.textField.text = value
+//        sourceCurrencyBox.ammount = value
+        guard let value = value else {
+            return
+        }
+        var value1 = Double(value)
+        guard var value1 = value1 else {
+            return
+        }
+        value1 =  value1 * 0.0082
+        let converted = String(format: "%.3f", value1)
+        sourceCurrencyBox.ammount = value
+        targetCurrencyBox.ammount = converted
     }
 }
     
