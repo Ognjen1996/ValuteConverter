@@ -28,6 +28,7 @@ final class KeypadView: UIView {
     var number1: Double?
     var number2: Double?
     var sign: String?
+    var flag: Int = 0
     
     @IBAction func hideButton(_ sender: UIButton) {
         equalsButton.isHidden = true
@@ -64,10 +65,13 @@ final class KeypadView: UIView {
     @IBAction func addDigit(_ sender: UIButton) {
         guard let numString = sender.titleLabel?.text else {
             buttonsUntouch(sender)
-            
             return
         }
-        stringAmount = ""
+        if flag == 1 {
+            stringAmount = ""
+            flag = 0
+        }
+
         var value = stringAmount ?? ""
         value += numString
         stringAmount = value
@@ -76,18 +80,18 @@ final class KeypadView: UIView {
     @IBAction func didTapOperator(_ sender: UIButton){
         if let caption = sender.titleLabel!.text {
             sign = caption
-            number1 = Double(stringAmount!)
-//            clearAll()
+            number1 = Double(stringAmount ?? "")
             showButton(sender)
     }
         disableButtons()
+        flag = 1
 }
     
     @IBAction func didTapEquals(_ sender: UIButton){
         switch sign{
         case "+":
             
-            number2 = Double(stringAmount!)
+            number2 = Double(stringAmount ?? "")
             let result = number1! + number2!
             let a = String(result)
             stringAmount = a
@@ -95,7 +99,7 @@ final class KeypadView: UIView {
             break
         case "-":
             
-            number2 = Double(stringAmount!)
+            number2 = Double(stringAmount ?? "")
             let result = number1! - number2!
             let a = String(result)
             stringAmount = a
@@ -103,7 +107,7 @@ final class KeypadView: UIView {
             break
         case "X":
             
-            number2 = Double(stringAmount!)
+            number2 = Double(stringAmount ?? "")
             let result = number1! * number2!
             let a = String(result)
             stringAmount = a
@@ -111,7 +115,7 @@ final class KeypadView: UIView {
             break
         case "/":
             
-            number2 = Double(stringAmount!)
+            number2 = Double(stringAmount ?? "")
             let result = number1! / number2!
             let a = String(result)
             stringAmount = a
@@ -145,6 +149,23 @@ final class KeypadView: UIView {
             
         }
     }
+    
+    @IBAction func didTapDot(_ sender: UIButton) {
+        if let caption = sender.titleLabel!.text {
+            var s = stringAmount ?? ""
+            if !s.contains(caption){
+                s += caption
+                stringAmount = s
+            }
+        }
+    }
+    
+    @IBAction func clearAll(){
+        stringAmount = ""
+        enableButtons()
+        hideButton(equalsButton)
+    }
+
        
 }
  

@@ -188,7 +188,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2M-bW-h5w">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
-                                                <color key="backgroundColor" white="1" alpha="0.60304966100000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.8075183637674177" green="0.91766830361424956" blue="1" alpha="0.61947465753879671" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="J2M-bW-h5w" secondAttribute="height" multiplier="1:1" id="ThV-2s-WNF"/>
                                                 </constraints>
@@ -267,7 +267,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-ex-ToY">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="94.5"/>
-                                                <color key="backgroundColor" white="1" alpha="0.60304966100000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.8075183637674177" green="0.91766830361424956" blue="1" alpha="0.61947465753879671" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="X"/>
                                                 <connections>
@@ -343,7 +343,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHi-g6-pkh">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
-                                                <color key="backgroundColor" white="1" alpha="0.60304966100000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.8075183637674177" green="0.91766830361424956" blue="1" alpha="0.61947465753879671" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="-"/>
                                                 <connections>
@@ -420,7 +420,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kve-1X-WBd">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="94.5"/>
-                                                <color key="backgroundColor" white="1" alpha="0.60304966100000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.67795119964550699" green="0.77042746670108619" blue="0.83954895648759664" alpha="0.61947465753879671" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="+"/>
                                                 <connections>
@@ -432,7 +432,7 @@
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMT-V6-JOZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="94.5"/>
-                                                <color key="backgroundColor" red="0.16626435519999999" green="0.48668432239999998" blue="0.54917997119999995" alpha="0.74682305783641578" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.78824728860000004" green="0.84853818999999997" blue="1" alpha="0.61947465749999997" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="="/>
                                                 <connections>
@@ -441,6 +441,7 @@
                                                     <action selector="didTapEquals:" destination="qZR-O8-0x6" eventType="touchUpInside" id="Jn3-vn-v7B"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="MEg-Ws-YJj"/>
                                                     <action selector="hideButton:" destination="qZR-O8-0x6" eventType="touchUpInside" id="SFD-np-k9Q"/>
+                                                    <action selector="showButton:" destination="qZR-O8-0x6" eventType="touchUpInside" id="vQM-bv-Wn0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oq6-mv-XEd">
@@ -451,6 +452,7 @@
                                                 <connections>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="D0s-i8-4A1"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="RUL-Tu-mIg"/>
+                                                    <action selector="didTapDot:" destination="qZR-O8-0x6" eventType="touchUpInside" id="PYp-4H-e8k"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="ym7-uS-ceh"/>
                                                 </connections>
                                             </button>
@@ -468,12 +470,13 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clH-gk-GIU">
                                                 <rect key="frame" x="287.5" y="0.0" width="94.5" height="94.5"/>
-                                                <color key="backgroundColor" white="1" alpha="0.60023301314164534" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="1" green="0.93402926239261441" blue="0.90185767669694117" alpha="0.48386523188376912" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="DELETE"/>
                                                 <connections>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="63N-lx-4qx"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="U8X-ZU-hfc"/>
+                                                    <action selector="clearAll" destination="qZR-O8-0x6" eventType="touchUpInside" id="ZvZ-bc-Z4s"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="0W2-KT-mnm"/>
                                                 </connections>
                                             </button>
