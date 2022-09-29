@@ -177,7 +177,6 @@ final class KeypadView: UIView {
         hideButton(equalsButton)
     }
 
-       
 }
  
 

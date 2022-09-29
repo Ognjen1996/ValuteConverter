@@ -17,17 +17,25 @@ final class ConverterController: UIViewController {
     @IBOutlet weak var sourceCurrencyBox: CurrencyBox!
     @IBOutlet weak var targetCurrencyBox: CurrencyBox!
     
+    weak var activeCurrencyBox: CurrencyBox
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
         // Do any additional setup after loading the view.
+        cleanupUI()
         keypadView.delegate = self
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
 //        self.navigationController?.isNavigationBarHidden = false
 //    }
+    
+    func cleanupUI() {
+        sourceCurrencyBox.ammount = ""
+        targetCurrencyBox.ammount = ""
+    }
 }
 
 extension ConverterController: KeypadViewDelegate {
@@ -41,19 +49,35 @@ extension ConverterController: KeypadViewDelegate {
             return
         }
         value1 =  value1 * 0.0082
-        let converted = String(format: "%.3f", value1)
+        let converted = String(format: "%.2f", value1)
         sourceCurrencyBox.ammount = value
         targetCurrencyBox.ammount = converted
     }
 }
+
+extension ConverterController: PickerControllerDelegate {
+    func pickerController(_ controller: PickerController, didSelectCurrency cc: String) {
+        activeCurrencyBox.currencyCode = cc
+    }
+}
     
 private extension ConverterController{
+    
+    func changeCurrency(_ sender: CurrencyBox) {
+        activeCurrencyBox = sender
+        pickCurrency()
+    }
+    
     @IBAction func pickCurrency() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PickerController")
-        
-        show(vc, sender: self)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "PickerController") as? PickerController {
+            vc.delegate = self
+            vc.currencies = Locale.commonISOCurrencyCodes
+            show(vc, sender: self)
+        }
     }
+
+
 }
 
 

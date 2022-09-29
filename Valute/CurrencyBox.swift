@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CurrencyBox: UIView {
+final class CurrencyBox: UIControl {
     @IBOutlet weak var flagView: UIImageView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
@@ -28,5 +28,12 @@ final class CurrencyBox: UIView {
         set {
             textField.text = newValue
         }
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        textField.isUserInteractionEnabled = false
+        flagView.isUserInteractionEnabled = false
+        label.isUserInteractionEnabled = false
     }
 }

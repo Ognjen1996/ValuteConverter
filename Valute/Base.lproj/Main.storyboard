@@ -62,24 +62,15 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaw-b7-t7r">
-                                                                <rect key="frame" x="0.0" y="0.0" width="174.5" height="20.5"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain"/>
-                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="pjj-ww-fai" firstAttribute="top" secondItem="aWu-oq-qzp" secondAttribute="top" id="4zv-J6-NFk"/>
-                                                            <constraint firstItem="gaw-b7-t7r" firstAttribute="leading" secondItem="aWu-oq-qzp" secondAttribute="leading" id="BzO-89-cHu"/>
                                                             <constraint firstAttribute="bottom" secondItem="pjj-ww-fai" secondAttribute="bottom" id="DlJ-K4-a8E"/>
                                                             <constraint firstItem="pjj-ww-fai" firstAttribute="leading" secondItem="lOE-vu-Vre" secondAttribute="trailing" constant="8" id="ER2-FZ-t2b"/>
                                                             <constraint firstItem="lOE-vu-Vre" firstAttribute="centerY" secondItem="pjj-ww-fai" secondAttribute="centerY" id="F9T-Cq-Rdl"/>
-                                                            <constraint firstItem="gaw-b7-t7r" firstAttribute="top" secondItem="aWu-oq-qzp" secondAttribute="top" id="OMn-C8-IPr"/>
                                                             <constraint firstItem="lOE-vu-Vre" firstAttribute="leading" secondItem="aWu-oq-qzp" secondAttribute="leading" id="RHT-Ub-Dlw"/>
                                                             <constraint firstAttribute="trailing" secondItem="pjj-ww-fai" secondAttribute="trailing" id="bnK-F3-DIV"/>
-                                                            <constraint firstAttribute="bottom" secondItem="gaw-b7-t7r" secondAttribute="bottom" id="q7x-WY-ceY"/>
-                                                            <constraint firstAttribute="trailing" secondItem="gaw-b7-t7r" secondAttribute="trailing" id="xFA-7e-yLl"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -120,21 +111,12 @@
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcZ-m9-8Eo">
-                                                                <rect key="frame" x="0.0" y="0.0" width="174.5" height="20.5"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain"/>
-                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstItem="WcZ-m9-8Eo" firstAttribute="top" secondItem="9z8-aX-vGt" secondAttribute="top" id="Cux-cH-Ca9"/>
                                                             <constraint firstAttribute="bottom" secondItem="zav-Y1-BJE" secondAttribute="bottom" id="Ek2-GH-mZp"/>
-                                                            <constraint firstItem="WcZ-m9-8Eo" firstAttribute="leading" secondItem="9z8-aX-vGt" secondAttribute="leading" id="JTy-le-bcl"/>
                                                             <constraint firstItem="x6R-gK-9A8" firstAttribute="centerY" secondItem="zav-Y1-BJE" secondAttribute="centerY" id="PAd-56-eHB"/>
                                                             <constraint firstItem="zav-Y1-BJE" firstAttribute="leading" secondItem="9z8-aX-vGt" secondAttribute="leading" id="RE1-9X-HQa"/>
-                                                            <constraint firstAttribute="bottom" secondItem="WcZ-m9-8Eo" secondAttribute="bottom" id="bAe-iD-QLj"/>
-                                                            <constraint firstAttribute="trailing" secondItem="WcZ-m9-8Eo" secondAttribute="trailing" id="gR4-hs-Ng2"/>
                                                             <constraint firstItem="x6R-gK-9A8" firstAttribute="leading" secondItem="zav-Y1-BJE" secondAttribute="trailing" constant="8" id="lb1-mo-4qs"/>
                                                             <constraint firstAttribute="trailing" secondItem="x6R-gK-9A8" secondAttribute="trailing" id="tWB-IV-IJE"/>
                                                             <constraint firstItem="zav-Y1-BJE" firstAttribute="top" secondItem="9z8-aX-vGt" secondAttribute="top" id="vo8-Zr-0gW"/>
@@ -476,7 +458,7 @@
                                                 <connections>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchCancel" id="63N-lx-4qx"/>
                                                     <action selector="buttonsUntouch:" destination="qZR-O8-0x6" eventType="touchUpInside" id="U8X-ZU-hfc"/>
-                                                    <action selector="clearAll" destination="qZR-O8-0x6" eventType="touchUpInside" id="ZvZ-bc-Z4s"/>
+                                                    <action selector="clearAll" destination="qZR-O8-0x6" eventType="touchUpInside" id="amW-zX-s0A"/>
                                                     <action selector="didTouchButton:" destination="qZR-O8-0x6" eventType="touchDown" id="0W2-KT-mnm"/>
                                                 </connections>
                                             </button>
