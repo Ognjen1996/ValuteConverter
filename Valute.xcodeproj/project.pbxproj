@@ -17,6 +17,7 @@
 		3566694B28DC97AE009074BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3566694928DC97AE009074BA /* LaunchScreen.storyboard */; };
 		3574C0C828E6B8F900BC7459 /* UserDefaults-Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3574C0C728E6B8F900BC7459 /* UserDefaults-Shared.swift */; };
 		3574C0CA28E6BDFF00BC7459 /* Locale-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3574C0C928E6BDFF00BC7459 /* Locale-Extensions.swift */; };
+		3574C0CC28E6D64300BC7459 /* PickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3574C0CB28E6D64300BC7459 /* PickerCell.swift */; };
 		35A8747328E19D610053E6CE /* flags.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A8747228E19D610053E6CE /* flags.xcassets */; };
 		35A8747528E19E750053E6CE /* PickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A8747428E19E750053E6CE /* PickerController.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		3566694C28DC97AE009074BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3574C0C728E6B8F900BC7459 /* UserDefaults-Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults-Shared.swift"; sourceTree = "<group>"; };
 		3574C0C928E6BDFF00BC7459 /* Locale-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale-Extensions.swift"; sourceTree = "<group>"; };
+		3574C0CB28E6D64300BC7459 /* PickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerCell.swift; sourceTree = "<group>"; };
 		35A8747228E19D610053E6CE /* flags.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = flags.xcassets; sourceTree = "<group>"; };
 		35A8747428E19E750053E6CE /* PickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 				3566694028DC97A7009074BA /* SceneDelegate.swift */,
 				355511B528E2D3D8007ECFB2 /* CurrencyBox.swift */,
 				355511B728E2D3F3007ECFB2 /* KeypadView.swift */,
+				3574C0CB28E6D64300BC7459 /* PickerCell.swift */,
 				3566694428DC97A7009074BA /* Main.storyboard */,
 				3566694728DC97AE009074BA /* Assets.xcassets */,
 				3566694928DC97AE009074BA /* LaunchScreen.storyboard */,
@@ -162,6 +165,7 @@
 				3574C0C828E6B8F900BC7459 /* UserDefaults-Shared.swift in Sources */,
 				355511B828E2D3F3007ECFB2 /* KeypadView.swift in Sources */,
 				355956BA28DD918900D7E626 /* ConverterController.swift in Sources */,
+				3574C0CC28E6D64300BC7459 /* PickerCell.swift in Sources */,
 				3566694128DC97A7009074BA /* SceneDelegate.swift in Sources */,
 				35A8747528E19E750053E6CE /* PickerController.swift in Sources */,
 				3574C0CA28E6BDFF00BC7459 /* Locale-Extensions.swift in Sources */,

@@ -47,6 +47,12 @@ final class KeypadView: UIView {
     @IBAction func showButton(_ sender: UIButton) {
         equalsButton.isHidden = false
     }
+    func disableEquals(){
+        equalsButton.isUserInteractionEnabled = false
+    }
+    func enableEquals(){
+        equalsButton.isUserInteractionEnabled = true
+    }
 
     
     @IBAction func didTouchButton(_ sender: UIButton){
@@ -99,6 +105,7 @@ final class KeypadView: UIView {
 }
     
     @IBAction func didTapEquals(_ sender: UIButton){
+        
         switch sign{
         case "+":
             
@@ -106,7 +113,8 @@ final class KeypadView: UIView {
             let result = number1! + number2!
             let a = String(result)
             stringAmount = a
-            hideButton(sender)
+            hideButton(equalsButton)
+            disableEquals()
             break
         case "-":
             
@@ -114,7 +122,8 @@ final class KeypadView: UIView {
             let result = number1! - number2!
             let a = String(result)
             stringAmount = a
-            hideButton(sender)
+            hideButton(equalsButton)
+            disableEquals()
             break
         case "X":
             
@@ -122,7 +131,8 @@ final class KeypadView: UIView {
             let result = number1! * number2!
             let a = String(result)
             stringAmount = a
-            hideButton(sender)
+            hideButton(equalsButton)
+            disableEquals()
             break
         case "/":
             
@@ -130,15 +140,17 @@ final class KeypadView: UIView {
             let result = number1! / number2!
             let a = String(result)
             stringAmount = a
-            hideButton(sender)
+            hideButton(equalsButton)
+            disableEquals()
             break
         default:
             buttonsUntouch(sender)
-            hideButton(sender)
+            hideButton(equalsButton)
             break
             
         }
         enableButtons()
+        enableEquals()
         
     }
     
@@ -152,6 +164,7 @@ final class KeypadView: UIView {
             
         }
     }
+    
 
     func enableButtons(){
         for btn in operatorButtons{
@@ -172,7 +185,21 @@ final class KeypadView: UIView {
     }
     
     @IBAction func clearAll(){
-        stringAmount = ""
+        guard var str = stringAmount else {
+            enableButtons()
+            hideButton(equalsButton)
+            return
+        }
+        guard let left = leftTextField.text else {
+            return
+        }
+        guard let right = leftTextField.text else {
+            return
+        }
+        str = String(str.dropLast())
+        stringAmount = str
+        leftTextField.text = String(left.dropLast())
+        rightTextField.text = String(right.dropLast())
         enableButtons()
         hideButton(equalsButton)
     }

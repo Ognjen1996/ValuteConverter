@@ -11,8 +11,8 @@ final class ConverterController: UIViewController {
     
 //    @IBOutlet weak private var keypadView: KeypadView!
     
-    @IBOutlet weak var leftCurrencyBox: CurrencyBox!
-    @IBOutlet weak var rightCurrencyBox: CurrencyBox!
+    @IBOutlet weak var leftTextField: UITextField!
+    @IBOutlet weak var rightTextField: UITextField!
     @IBOutlet weak var keypadView: KeypadView!
     @IBOutlet weak var sourceCurrencyBox: CurrencyBox!
     @IBOutlet weak var targetCurrencyBox: CurrencyBox!
@@ -53,7 +53,7 @@ extension ConverterController: KeypadViewDelegate {
         value1 =  value1 * 0.0082
         let converted = String(format: "%.2f", value1)
         sourceCurrencyBox.ammount = value
-        targetCurrencyBox.ammount = converted
+//        targetCurrencyBox.ammount = converted
     }
 }
 
@@ -75,7 +75,7 @@ private extension ConverterController {
         targetCurrencyBox.currencyCode = UserDefaults.targetCC
     }
     
-    func pickCurrency() {
+    @IBAction func pickCurrency() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let vc = storyboard.instantiateViewController(withIdentifier: "PickerController") as? PickerController {
             vc.delegate = self

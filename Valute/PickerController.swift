@@ -13,15 +13,40 @@ protocol PickerControllerDelegate: class {
 
 final class PickerController: UIViewController {
     
+    @IBOutlet private weak var tableView: UITableView!
+    
     var currencies: [String] = [] {
         didSet{
             
         }
     }
     weak var delegate: PickerControllerDelegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.dataSource = self
+    }
+    
 }
     
-    
+extension PickerController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return currencies.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell: PickerCell = tableView.dequeueReusableCell(withIdentifier: "PickerCell", for: indexPath) as! PickerCell
+        
+        
+        let cc = currencies[indexPath.row]
+        cell.populateCell(with: cc)
+        return cell
+    }
+}
 
     /*
     // MARK: - Navigation

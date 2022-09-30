@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 extension UserDefaults {
@@ -34,5 +35,11 @@ extension UserDefaults {
             let defs = UserDefaults.standard
             defs.string(forKey: Key.targetCC.rawValue)
         }
+    }
+}
+
+extension UITableViewCell{
+    static var reuseIdentifier: String {
+        return String(describing: self)
     }
 }
