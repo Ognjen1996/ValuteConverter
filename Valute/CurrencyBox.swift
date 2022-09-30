@@ -19,6 +19,7 @@ final class CurrencyBox: UIControl {
         }
         set {
             label.text = newValue
+            updateFlagView(currencyCode)
         }
     }
     var ammount: String?{
@@ -35,5 +36,17 @@ final class CurrencyBox: UIControl {
         textField.isUserInteractionEnabled = false
         flagView.isUserInteractionEnabled = false
         label.isUserInteractionEnabled = false
+    }
+}
+
+private extension CurrencyBox {
+    func updateFlagView(_ cc: String?) {
+        guard let cc = cc else {
+            flagView.image = UIImage(named: "Unknown")
+            return
+        }
+        let countryCode = Locale.countryCode(for: cc).lowercased()
+        
+        flagView.image = UIImage(named: countryCode) ?? UIImage(named: "Unknown")
     }
 }

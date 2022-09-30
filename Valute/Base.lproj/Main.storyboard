@@ -550,14 +550,7 @@
                             <constraint firstItem="QMi-2Y-cjs" firstAttribute="leading" secondItem="scb-hS-2HX" secondAttribute="leading" id="zae-Ao-2ru"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Converter" id="Ncr-T7-h08">
-                        <barButtonItem key="rightBarButtonItem" title="Set" id="RUR-Ba-jHD">
-                            <color key="tintColor" red="0.073534958060000002" green="0.3846774697" blue="0.43471908570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="pickCurrency" destination="sjA-0q-Hio" id="bKn-z8-2CG"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Converter" id="Ncr-T7-h08"/>
                     <connections>
                         <outlet property="keypadView" destination="qZR-O8-0x6" id="Qhf-tf-fSt"/>
                         <outlet property="sourceCurrencyBox" destination="jCQ-hc-BFo" id="S6d-6d-GSz"/>
