@@ -9,6 +9,7 @@ import UIKit
 
 protocol PickerControllerDelegate: class {
     func pickerController(_ controller: PickerController, didSelectCurrency cc: String)
+    
 }
 
 final class PickerController: UIViewController {
@@ -25,7 +26,9 @@ final class PickerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
 }
@@ -45,6 +48,15 @@ extension PickerController: UITableViewDataSource {
         let cc = currencies[indexPath.row]
         cell.populateCell(with: cc)
         return cell
+    }
+}
+
+extension PickerController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cc = currencies[indexPath.row]
+        
+        delegate?.pickerController(self, didSelectCurrency: cc)
+      
     }
 }
 

@@ -144,6 +144,8 @@ final class KeypadView: UIView {
             disableEquals()
             break
         default:
+            enableButtons()
+            enableEquals()
             buttonsUntouch(sender)
             hideButton(equalsButton)
             break
@@ -151,6 +153,7 @@ final class KeypadView: UIView {
         }
         enableButtons()
         enableEquals()
+        sign = nil
         
     }
     
@@ -193,13 +196,9 @@ final class KeypadView: UIView {
         guard let left = leftTextField.text else {
             return
         }
-        guard let right = leftTextField.text else {
-            return
-        }
         str = String(str.dropLast())
         stringAmount = str
         leftTextField.text = String(left.dropLast())
-        rightTextField.text = String(right.dropLast())
         enableButtons()
         hideButton(equalsButton)
     }

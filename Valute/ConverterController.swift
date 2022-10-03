@@ -60,12 +60,14 @@ extension ConverterController: KeypadViewDelegate {
 extension ConverterController: PickerControllerDelegate {
     func pickerController(_ controller: PickerController, didSelectCurrency cc: String) {
         activeCurrencyBox?.currencyCode = cc
+        
+        navigationController?.popViewController(animated: true)
     }
 }
     
 private extension ConverterController {
     
-    func changeCurrency(_ sender: CurrencyBox) {
+    @IBAction func changeCurrency(_ sender: CurrencyBox) {
         activeCurrencyBox = sender
         pickCurrency()
     }
@@ -81,6 +83,7 @@ private extension ConverterController {
             vc.delegate = self
             vc.currencies = Locale.commonISOCurrencyCodes
             show(vc, sender: self)
+            
         }
     }
 }

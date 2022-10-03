@@ -53,7 +53,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWu-oq-qzp" userLabel="btnbox">
                                                         <rect key="frame" x="8" y="8" width="174.5" height="20.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" image="Serbia" translatesAutoresizingMaskIntoConstraints="NO" id="lOE-vu-Vre">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="255" image="rs" translatesAutoresizingMaskIntoConstraints="NO" id="lOE-vu-Vre">
                                                                 <rect key="frame" x="0.0" y="-1.5" width="24" height="24"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjj-ww-fai">
@@ -85,7 +85,7 @@
                                                     <constraint firstAttribute="bottomMargin" secondItem="S4A-yr-e3x" secondAttribute="bottom" id="vyH-wg-ZZE"/>
                                                 </constraints>
                                                 <connections>
-                                                    <action selector="pickCurrency" destination="sjA-0q-Hio" eventType="touchUpInside" id="3MF-uJ-IFu"/>
+                                                    <action selector="changeCurrency:" destination="sjA-0q-Hio" eventType="touchUpInside" id="nDt-h3-8Iu"/>
                                                     <outlet property="flagView" destination="lOE-vu-Vre" id="2ip-jW-JqC"/>
                                                     <outlet property="label" destination="pjj-ww-fai" id="mp9-7j-Dg6"/>
                                                     <outlet property="textField" destination="S4A-yr-e3x" id="82f-FT-ow3"/>
@@ -103,7 +103,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9z8-aX-vGt" userLabel="btnbox">
                                                         <rect key="frame" x="8" y="8" width="174.5" height="20.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="United-States" translatesAutoresizingMaskIntoConstraints="NO" id="x6R-gK-9A8">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="us" translatesAutoresizingMaskIntoConstraints="NO" id="x6R-gK-9A8">
                                                                 <rect key="frame" x="150.5" y="-1.5" width="24" height="24"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zav-Y1-BJE">
@@ -135,7 +135,7 @@
                                                     <constraint firstItem="9z8-aX-vGt" firstAttribute="trailing" secondItem="JjF-hI-gJh" secondAttribute="trailing" id="tMZ-qT-Mj8"/>
                                                 </constraints>
                                                 <connections>
-                                                    <action selector="pickCurrency" destination="sjA-0q-Hio" eventType="touchUpInside" id="W56-z9-nDm"/>
+                                                    <action selector="changeCurrency:" destination="sjA-0q-Hio" eventType="touchUpInside" id="Oo7-Sf-WJS"/>
                                                     <outlet property="flagView" destination="x6R-gK-9A8" id="9hL-jb-xiF"/>
                                                     <outlet property="label" destination="zav-Y1-BJE" id="ERD-J1-7Ni"/>
                                                     <outlet property="textField" destination="JjF-hI-gJh" id="TJa-FQ-Q7B"/>
@@ -578,17 +578,17 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PickerCell" id="syL-rN-ZWu" customClass="PickerCell" customModule="Valute" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="syL-rN-ZWu" id="cdd-Fs-V2U">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="rs" translatesAutoresizingMaskIntoConstraints="NO" id="EtP-gf-fby">
-                                                    <rect key="frame" x="20" y="9.5" width="24" height="24"/>
+                                                    <rect key="frame" x="20" y="10" width="24" height="24"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWa-xp-DNO">
-                                                    <rect key="frame" x="54" y="11" width="340" height="21"/>
+                                                    <rect key="frame" x="54" y="11" width="340" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -633,10 +633,9 @@
     </scenes>
     <color key="tintColor" red="0.073534958060000002" green="0.3846774697" blue="0.43471908570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
-        <image name="Serbia" width="24" height="24"/>
-        <image name="United-States" width="24" height="24"/>
         <image name="globalbg" width="313" height="313"/>
         <image name="rs" width="24" height="24"/>
+        <image name="us" width="24" height="24"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
