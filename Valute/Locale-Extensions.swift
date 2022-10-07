@@ -39,6 +39,6 @@ extension Locale {
                 return rc
             }
         }
-        return "Empty"
+        return "Unknown"
     }
 }

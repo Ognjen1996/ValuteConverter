@@ -16,36 +16,64 @@ final class PickerController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     
+    var filterString: String?
+    
     var currencies: [String] = [] {
         didSet{
+            if !isViewLoaded {return}
+            tableView.reloadData()
+        }
+    }
+    
+    private var filteredCurrencies: [String] {
+        guard let filter = filterString?.uppercased() else {
+            return currencies
+        }
+        var arr: [String] = []
+        for cc in currencies {
+            if cc.contains(filter){
+                arr.append(cc)
+            }
             
         }
+        return arr
+        
+
     }
     weak var delegate: PickerControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureUI()
         
         
         tableView.dataSource = self
         tableView.delegate = self
     }
     
+    func configureUI() {
+        title = "Choose currency"
+        tableView.backgroundView = UIImageView(image: UIImage(named: "globalbg"))
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 44
+    }
+    
 }
+
     
 extension PickerController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currencies.count
+        return filteredCurrencies.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: PickerCell = tableView.dequeueReusableCell(withIdentifier: "PickerCell", for: indexPath) as! PickerCell
         
         
-        let cc = currencies[indexPath.row]
+        let cc = filteredCurrencies[indexPath.row]
         cell.populateCell(with: cc)
         return cell
     }
@@ -53,7 +81,7 @@ extension PickerController: UITableViewDataSource {
 
 extension PickerController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cc = currencies[indexPath.row]
+        let cc = filteredCurrencies[indexPath.row]
         
         delegate?.pickerController(self, didSelectCurrency: cc)
       

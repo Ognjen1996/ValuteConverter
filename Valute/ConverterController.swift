@@ -17,6 +17,24 @@ final class ConverterController: UIViewController {
     @IBOutlet weak var sourceCurrencyBox: CurrencyBox!
     @IBOutlet weak var targetCurrencyBox: CurrencyBox!
     
+    
+    private var ammount: Double? {
+        didSet {
+            if !isViewLoaded {return}
+            convert()
+        }
+    }
+    private var sourceCurrencyCode: String = UserDefaults.sourceCC
+    private var targetCurrencyCode: String = UserDefaults.targetCC
+    
+    private var rate: Double? {
+        didSet {
+            if !isViewLoaded {return}
+            convert()
+        }
+    }
+    
+    
     weak var activeCurrencyBox: CurrencyBox?
     
 
@@ -28,6 +46,9 @@ final class ConverterController: UIViewController {
         cleanupUI()
         keypadView.delegate = self
         setupInitialState()
+        
+        fetchRate()
+        convert()
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -42,18 +63,17 @@ final class ConverterController: UIViewController {
 
 extension ConverterController: KeypadViewDelegate {
     func keypadView(_ keypad: KeypadView, didChangeValue value: String?) {
-//        sourceCurrencyBox.ammount = value
-        guard let value = value else {
-            return
-        }
-        var value1 = Double(value)
-        guard var value1 = value1 else {
-            return
-        }
-        value1 =  value1 * 0.0082
-        let converted = String(format: "%.2f", value1)
+//        guard let value = value else {
+//            return
+//        }
+//        var value1 = Double(value)
+//        guard var value1 = value1 else {
+//            return
+//        }
+//        value1 =  value1 * 0.0082
+//        let converted = String(format: "%.2f", value1)
         sourceCurrencyBox.ammount = value
-//        targetCurrencyBox.ammount = converted
+        ammount = keypad.ammount
     }
 }
 
@@ -62,6 +82,7 @@ extension ConverterController: PickerControllerDelegate {
         activeCurrencyBox?.currencyCode = cc
         
         navigationController?.popViewController(animated: true)
+        fetchRate()
     }
 }
     
@@ -73,8 +94,8 @@ private extension ConverterController {
     }
     
     func setupInitialState() {
-        sourceCurrencyBox.currencyCode = UserDefaults.sourceCC
-        targetCurrencyBox.currencyCode = UserDefaults.targetCC
+        sourceCurrencyBox.currencyCode = sourceCurrencyCode
+        targetCurrencyBox.currencyCode = targetCurrencyCode
     }
     
     @IBAction func pickCurrency() {
@@ -84,6 +105,25 @@ private extension ConverterController {
             vc.currencies = Locale.commonISOCurrencyCodes
             show(vc, sender: self)
             
+        }
+    }
+    func convert() {
+        guard
+            let ammount = ammount,
+            let rate = rate
+        else{
+            targetCurrencyBox.ammount = ""
+            return
+        }
+        let res = ammount * rate
+        targetCurrencyBox.ammount = String(format: "%.2f", res)
+        
+    }
+    
+    func fetchRate() {
+        ExchangeManager.shared.rate(targetCC: targetCurrencyCode, sourceCC: sourceCurrencyCode) {
+            [weak self] r in
+            self?.rate = r
         }
     }
 }

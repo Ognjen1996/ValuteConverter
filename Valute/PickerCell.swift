@@ -12,6 +12,11 @@ final class PickerCell: UITableViewCell {
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var flagView: UIImageView!
     
+    override func awakeFromNib() {
+        label.textColor = .white
+        
+    }
+    
 }
 
 extension PickerCell {

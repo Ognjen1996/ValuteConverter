@@ -30,10 +30,16 @@ final class KeypadView: UIView {
     private var originalBackgroundColor: UIColor?
     
     private(set) var stringAmount: String? {
-        
         didSet {
             delegate?.keypadView(self, didChangeValue: stringAmount)
         }
+    }
+    var ammount: Double? {
+        guard let str = stringAmount else {
+            return nil
+        }
+        return Double(str)
+
     }
     
     var number1: Double?
