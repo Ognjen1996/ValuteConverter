@@ -21,6 +21,7 @@
 		35A8747328E19D610053E6CE /* flags.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A8747228E19D610053E6CE /* flags.xcassets */; };
 		35A8747528E19E750053E6CE /* PickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A8747428E19E750053E6CE /* PickerController.swift */; };
 		35D88C3828F043050027B569 /* ExchangeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D88C3728F043050027B569 /* ExchangeManager.swift */; };
+		35EF024928F53F6100294310 /* ExchangeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF024828F53F6100294310 /* ExchangeError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		35A8747228E19D610053E6CE /* flags.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = flags.xcassets; sourceTree = "<group>"; };
 		35A8747428E19E750053E6CE /* PickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerController.swift; sourceTree = "<group>"; };
 		35D88C3728F043050027B569 /* ExchangeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeManager.swift; sourceTree = "<group>"; };
+		35EF024828F53F6100294310 /* ExchangeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				3574C0C728E6B8F900BC7459 /* UserDefaults-Shared.swift */,
 				3574C0C928E6BDFF00BC7459 /* Locale-Extensions.swift */,
 				35D88C3728F043050027B569 /* ExchangeManager.swift */,
+				35EF024828F53F6100294310 /* ExchangeError.swift */,
 			);
 			path = Valute;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EF024928F53F6100294310 /* ExchangeError.swift in Sources */,
 				355511B628E2D3D8007ECFB2 /* CurrencyBox.swift in Sources */,
 				3566693F28DC97A7009074BA /* AppDelegate.swift in Sources */,
 				35D88C3828F043050027B569 /* ExchangeManager.swift in Sources */,
