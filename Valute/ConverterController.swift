@@ -121,7 +121,7 @@ private extension ConverterController {
     }
     
     func fetchRate() {
-        ExchangeManager.shared.rate(targetCC: targetCurrencyCode, sourceCC: sourceCurrencyCode) {
+            ExchangeManager.shared.rate(targetCC: targetCurrencyCode, sourceCC: sourceCurrencyCode) {
             [weak self] r, error in
             
             if let error = error as? ExchangeError {

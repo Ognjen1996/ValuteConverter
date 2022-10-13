@@ -10,7 +10,7 @@ import Foundation
 final class ExchangeManager {
     static let shared = ExchangeManager()
     private init() {
-        
+        fetchCurrencyRates()
     }
     private var ratesPerUSD: [String: Double] = [:]
     private var lastUpdated: Date?
